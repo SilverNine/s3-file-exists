@@ -34,7 +34,7 @@ aws s3api head-object --bucket ${AWS_S3_BUCKET} --key ${FILE}
 # XXX: we are just checking the error code, but should check the result for a 404, and raise error in other cases
 if [ $? == 0 ]
 then
-  echo "s3-file-exists=true" >> $GITHUB_ENV
+  echo "S3_FILE_EXISTS=true" >> $GITHUB_ENV
 else
-  echo "s3-file-exists=false" >> $GITHUB_ENV
+  echo "S3_FILE_EXISTS=false" >> $GITHUB_ENV
 fi

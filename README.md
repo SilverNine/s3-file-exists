@@ -32,8 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: SilverNine/s3-file-exists-action@master
-        id: check
+      - uses: SilverNine/s3-file-exists@master
         env:
           FILE: ${{ github.sha }}
           AWS_S3_REGION: 'us-east-1'
@@ -42,10 +41,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Fail if Static file does not exist
         run: echo "ERROR: Static file not found in S3 bucket"
-        if: steps.check.outputs.exists == 'false'
+        if: ${{ env.S3_FILE_EXISTS }} == 'false'
       - name: Success if Static file does exist
         run: echo "Write a file to S3 bucket with name \${GITHUB_SHA}"
-        if: steps.check.outputs.exists == 'true'
+        if: ${{ env.S3_FILE_EXISTS }} == 'true'
 ```
 
 ### Configuration
