@@ -41,10 +41,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Fail if Static file does not exist
         run: echo "ERROR: Static file not found in S3 bucket"
-        if: ${{ env.S3_FILE_EXISTS }} == 'false'
+        if: ${{ env.S3_FILE_EXISTS == 'false' }}
       - name: Success if Static file does exist
         run: echo "Write a file to S3 bucket with name \${GITHUB_SHA}"
-        if: ${{ env.S3_FILE_EXISTS }} == 'true'
+        if: ${{ env.S3_FILE_EXISTS == 'true' }}
 ```
 
 ### Configuration
