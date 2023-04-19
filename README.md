@@ -57,7 +57,7 @@ The following settings must be passed as environment variables as shown in the e
 | `AWS_ACCESS_KEY_ID`     | Your AWS Access Key. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)                                                                                                       | `secret`       | **Yes**  |
 | `AWS_SECRET_ACCESS_KEY` | Your AWS Secret Access Key. [More info here.](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)                                                                                                | `secret`       | **Yes**  |
 | `AWS_S3_BUCKET`         | The name of the bucket you're syncing to. For example, `jarv.is`.                                                                                                                                                         | `secret`       | **Yes**  |
-| `AWS_REGION`            | The region where you created your bucket in. For example, `us-east-1`. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) | `env`          | **Yes**  |
+| `AWS_S3_REGION`         | The region where you created your bucket in. For example, `us-east-1`. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) | `env`          | **Yes**  |
 | `FILE`                  | The file to check                                                                                                                                                                                                         | `env`          | **Yes**  |
 
 ## License
