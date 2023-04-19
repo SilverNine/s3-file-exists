@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: SilverNine/s3-file-exists@master
+      - uses: SilverNine/s3-file-exists@v1
         env:
           FILE: ${{ github.sha }}
           AWS_S3_REGION: 'us-east-1'
