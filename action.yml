@@ -1,0 +1,12 @@
+name: 'S3 File Exists'
+description: 'Check if a file exists in an S3 bucket and set an output with true or false'
+author: 'SilverNine (akasilvernine@gmail.com)'
+branding:
+  icon: file
+  color: green
+outputs:
+  exists:
+    description: \'true\' if file exists, \'false\' otherwise
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
