@@ -31,7 +31,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - uses: SilverNine/s3-file-exists@v1
         env:
           FILE: ${{ github.sha }}
